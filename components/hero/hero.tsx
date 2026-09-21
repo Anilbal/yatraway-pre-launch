@@ -61,7 +61,6 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-8 pb-16 overflow-hidden bg-slate-950">
       {/* Blue background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent_45%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(6,182,212,0.10),transparent_35%)]" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Status Badge */}
