@@ -17,8 +17,8 @@ export default function Footer() {
           />
         </div>
 
-        <p className="text-xs text-slate-500">
-          &copy; 2026 Wanderlust Travel Agency Inc. All rights reserved.
+        <p className="text-sm text-slate-500">
+          &copy; 2026 Yatraway Nepal Tours and Travels. All rights reserved.
           Crafting unforgettable journeys.
         </p>
 
