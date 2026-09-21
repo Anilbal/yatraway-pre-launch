@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 export default function Navbar() {
@@ -16,30 +17,30 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-4 text-slate-400">
-        <a
+        <Link
           href="#"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-900 rounded-full border border-slate-800"
         >
           <FaInstagram className="w-4 h-4" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="#"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-900 rounded-full border border-slate-800"
         >
           <FaTiktok className="w-4 h-4" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="#"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-900 rounded-full border border-slate-800"
         >
           <FaYoutube className="w-4 h-4" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="#"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-900 rounded-full border border-slate-800"
         >
           <FaFacebook className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </nav>
   );
