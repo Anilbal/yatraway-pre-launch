@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaBell } from "react-icons/fa";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,8 +8,6 @@ export default function Hero() {
     minutes: 38,
     seconds: 52,
   });
-
-  const [email, setEmail] = useState("");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,10 +50,6 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-8 pb-16 overflow-hidden bg-slate-950">
       {/* Blue background */}
@@ -74,7 +67,6 @@ export default function Hero() {
             Platform Launching Summer 2026
           </span>
         </div>
-
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-6 leading-[1.1]">
           Unveil The Extraordinary.
@@ -83,13 +75,11 @@ export default function Hero() {
             Your Next Adventure Awaits.
           </span>
         </h1>
-
         {/* Description */}
         <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
           Tell us what moves you — adventure, culture, food, nature, wellness,
           romance, discovery — and we'll build an experience around you.
         </p>
-
         {/* Countdown */}
         <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-lg mx-auto mb-12 p-3 bg-slate-900/80 rounded-2xl border border-slate-800 shadow-2xl">
           {[
@@ -111,30 +101,6 @@ export default function Hero() {
               </span>
             </div>
           ))}
-        </div>
-
-        <div id="vip-form" className="max-w-md mx-auto">
-          <form
-            onSubmit={handleSubscribe}
-            className="flex flex-col sm:flex-row gap-3 p-2 bg-slate-900 rounded-2xl border border-slate-700 shadow-2xl"
-          >
-            <input
-              type="email"
-              required
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-transparent px-4 py-3 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 rounded-xl"
-            />
-
-            <button
-              type="submit"
-              className="px-6 py-3 bg-linear-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2 whitespace-nowrap active:scale-95"
-            >
-              <FaBell className="w-4 h-4" />
-              Notify Me
-            </button>
-          </form>
         </div>
       </div>
     </section>
