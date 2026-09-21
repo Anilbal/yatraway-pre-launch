@@ -45,10 +45,6 @@ export default function FAQ() {
 
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950">
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.12),transparent_35%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(6,182,212,0.08),transparent_35%)]" />
-
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
