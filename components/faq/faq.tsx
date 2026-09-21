@@ -78,7 +78,7 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className={`rounded-2xl border transition-all duration-300 ${
+                className={`rounded-2xl border transition-all duration-300 cursor-pointer ${
                   isOpen
                     ? "bg-slate-900 border-blue-500/40 shadow-lg shadow-blue-500/5"
                     : "bg-slate-900/70 border-slate-800 hover:border-slate-700"
@@ -87,7 +87,7 @@ export default function FAQ() {
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between gap-6 text-left px-5 sm:px-6 py-5"
+                  className="w-full flex items-center justify-between gap-6 text-left px-5 sm:px-6 py-5 cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span
