@@ -128,18 +128,6 @@ export default function FAQ() {
             );
           })}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-slate-500 mb-4">Still have questions?</p>
-
-          <a
-            href="#vip-form"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-linear-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-slate-950 font-bold shadow-lg shadow-blue-500/20 transition-all active:scale-95"
-          >
-            Join the Waitlist
-          </a>
-        </div>
       </div>
     </section>
   );
