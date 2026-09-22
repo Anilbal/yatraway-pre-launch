@@ -1,50 +1,35 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
+const TARGET_DATE = new Date("2026-10-13T03:44:52").getTime();
+
 export default function Hero() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 20,
-    hours: 14,
-    minutes: 38,
-    seconds: 52,
-  });
+  const calculateTimeLeft = () => {
+    const difference = TARGET_DATE - Date.now();
+
+    if (difference <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      };
+    }
+
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        }
-
-        if (prev.minutes > 0) {
-          return {
-            ...prev,
-            minutes: prev.minutes - 1,
-            seconds: 59,
-          };
-        }
-
-        if (prev.hours > 0) {
-          return {
-            ...prev,
-            hours: prev.hours - 1,
-            minutes: 59,
-            seconds: 59,
-          };
-        }
-
-        if (prev.days > 0) {
-          return {
-            ...prev,
-            days: prev.days - 1,
-            hours: 23,
-            minutes: 59,
-            seconds: 59,
-          };
-        }
-
-        return prev;
-      });
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
@@ -67,6 +52,7 @@ export default function Hero() {
             Platform Launching Winter 2026
           </span>
         </div>
+
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-6 leading-[1.1]">
           Unveil The Extraordinary.
@@ -75,11 +61,13 @@ export default function Hero() {
             Your Next Adventure Awaits.
           </span>
         </h1>
+
         {/* Description */}
         <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
           Tell us what moves you — adventure, culture, food, nature, wellness,
           romance, discovery — and we'll build an experience around you.
         </p>
+
         {/* Countdown */}
         <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-lg mx-auto mb-12 p-3 bg-slate-900/80 rounded-2xl border border-slate-800 shadow-2xl">
           {[
@@ -87,9 +75,9 @@ export default function Hero() {
             { label: "Hours", value: timeLeft.hours },
             { label: "Mins", value: timeLeft.minutes },
             { label: "Secs", value: timeLeft.seconds },
-          ].map((item, idx) => (
+          ].map((item) => (
             <div
-              key={idx}
+              key={item.label}
               className="flex flex-col items-center justify-center p-2 sm:p-3 rounded-xl bg-slate-800/50 border border-slate-700/50"
             >
               <span className="text-2xl sm:text-4xl font-black text-white font-mono tracking-tight">
