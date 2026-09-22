@@ -64,7 +64,7 @@ export default function Hero() {
           </span>
 
           <span className="text-xs sm:text-sm font-medium text-blue-300">
-            Platform Launching Summer 2026
+            Platform Launching Winter 2026
           </span>
         </div>
         {/* Main Headline */}
