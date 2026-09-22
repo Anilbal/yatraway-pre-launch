@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
-    days: 42,
+    days: 12,
     hours: 14,
     minutes: 38,
     seconds: 52,
