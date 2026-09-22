@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "When is the platform launching?",
     answer:
-      "We're putting the finishing touches on the platform and launching in Summer 2026. Join the waitlist to be among the first to know when we're live.",
+      "We're putting the finishing touches on the platform and launching in winter 2026. Join the waitlist to be among the first to know when we're live.",
   },
   {
     question: "What kind of travel experiences will you offer?",
