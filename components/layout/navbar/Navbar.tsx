@@ -16,34 +16,34 @@ export default function Navbar() {
         />
       </div>
 
-      <div className="flex items-center gap-4 text-slate-400">
+      <div className="flex items-center gap-2 md:gap-4 text-slate-400">
         <a
           href="https://www.facebook.com/yatraway.nepal.travels"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-800 rounded-full border border-slate-700"
           target="_blank"
         >
-          <FaFacebook className="w-5 h-5" />
+          <FaFacebook className="w-3 h-3 md:h-5 md:w-5" />
         </a>
         <a
           href="https://www.instagram.com/yatraway_nepal_travel/"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-800 rounded-full border border-slate-700"
           target="_blank"
         >
-          <FaInstagram className="w-5 h-5" />
+          <FaInstagram className="w-3 h-3 md:h-5 md:w-5" />
         </a>
         <a
           href="https://www.tiktok.com/@yatraway.nepal.travel"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-800 rounded-full border border-slate-700"
           target="_blank"
         >
-          <FaTiktok className="w-5 h-5" />
+          <FaTiktok className="w-3 h-3 md:h-5 md:w-5" />
         </a>
         <a
           href="https://www.youtube.com/@YatraWayNepalTravelTours"
           className="hover:text-blue-400 transition-colors p-2 bg-slate-800 rounded-full border border-slate-700"
           target="_blank"
         >
-          <FaYoutube className="w-5 h-5" />
+          <FaYoutube className="w-3 h-3 md:h-5 md:w-5" />
         </a>
       </div>
     </nav>
