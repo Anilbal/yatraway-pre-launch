@@ -20,11 +20,6 @@ const faqs = [
       "Yes. Our goal is to move beyond one-size-fits-all tours. Tell us what you love, and we'll help shape an experience around your interests, travel style, and preferences.",
   },
   {
-    question: "Can I join before the platform launches?",
-    answer:
-      "Absolutely. Enter your email above to join our early-access list. We'll keep you updated on the launch and give you a first look at what's coming.",
-  },
-  {
     question: "Will you offer international tours?",
     answer:
       "We're building the platform with travelers and destinations around the world in mind. More details about destinations and experiences will be announced closer to launch.",
