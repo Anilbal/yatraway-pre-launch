@@ -1,0 +1,26 @@
+{
+  "name": "Yatraway Nepal Tours & Travels",
+  "short_name": "Yatraway",
+  "description": "Discover authentic Nepal tours, Himalayan trekking expeditions, cultural sightseeing, and adventure packages with Yatraway.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["travel", "lifestyle", "navigation"],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
